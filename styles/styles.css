@@ -1,0 +1,96 @@
+/* SETUP */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* SETTINGS */
+:root {
+  --primary-color: hsl(204, 70%, 53%);
+  --text-color: hsl(0, 0%, 20%);
+  --background-color: hsl(0, 0%, 96%);
+  --header-height: 60px;
+}
+
+/* STRUCTURE */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: hsl(0, 0%, 100%);
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* COMPONENTS */
+.sign-up-btn {
+  background-color: var(--primary-color);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: hsl(204, 64%, 44%);
+}
+
+.color-palette {
+  display: flex;
+  flex-grow: 1;
+}
+
+.color-box {
+  flex: 1;
+  min-width: 60px;
+  position: relative;
+}
+
+.increment-label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsla(0, 0%, 100%, 0.7);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .color-palette {
+    flex-direction: column;
+  }
+
+  .color-box {
+    flex: 1 1 60px;
+  }
+}
