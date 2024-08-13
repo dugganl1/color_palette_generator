@@ -24,59 +24,108 @@
     <main>
       <div class="color-palette">
         <div
+          id="color-100"
           class="color-box"
+          data-hue="0"
           style="background-color: hsl(0, 100%, 50%)"
         >
           <span class="increment-label">100</span>
         </div>
         <div
+          id="color-200"
           class="color-box"
+          data-hue="40"
           style="background-color: hsl(40, 100%, 50%)"
         >
           <span class="increment-label">200</span>
         </div>
         <div
+          id="color-300"
           class="color-box"
+          data-hue="80"
           style="background-color: hsl(80, 100%, 50%)"
         >
           <span class="increment-label">300</span>
         </div>
         <div
+          id="color-400"
           class="color-box"
+          data-hue="120"
           style="background-color: hsl(120, 100%, 50%)"
         >
           <span class="increment-label">400</span>
         </div>
         <div
+          id="color-500"
           class="color-box"
+          data-hue="160"
           style="background-color: hsl(160, 100%, 50%)"
         >
           <span class="increment-label">500</span>
         </div>
         <div
+          id="color-600"
           class="color-box"
+          data-hue="200"
           style="background-color: hsl(200, 100%, 50%)"
         >
           <span class="increment-label">600</span>
         </div>
         <div
+          id="color-700"
           class="color-box"
+          data-hue="240"
           style="background-color: hsl(240, 100%, 50%)"
         >
           <span class="increment-label">700</span>
         </div>
         <div
+          id="color-800"
           class="color-box"
+          data-hue="280"
           style="background-color: hsl(280, 100%, 50%)"
         >
           <span class="increment-label">800</span>
         </div>
         <div
+          id="color-900"
           class="color-box"
+          data-hue="320"
           style="background-color: hsl(320, 100%, 50%)"
         >
           <span class="increment-label">900</span>
         </div>
+      </div>
+      <div
+        id="hsl-picker"
+        class="hsl-picker"
+      >
+        <h3>HSL Color Picker</h3>
+        <label for="hue">Hue: <span id="hue-value">160</span></label>
+        <input
+          type="range"
+          id="hue"
+          min="0"
+          max="360"
+          value="160"
+        />
+        <label for="saturation">Saturation: <span id="saturation-value">100</span>%</label>
+        <input
+          type="range"
+          id="saturation"
+          min="0"
+          max="100"
+          value="100"
+        />
+        <label for="lightness">Lightness: <span id="lightness-value">50</span>%</label>
+        <input
+          type="range"
+          id="lightness"
+          min="0"
+          max="100"
+          value="50"
+        />
+        <button id="close-picker">Close</button>
       </div>
     </main>
     <script src="scripts/main.js"></script>
